@@ -1,0 +1,21 @@
+!pip install SimpleITK
+!pip install torch===1.6.0 torchvision===0.7.0 -f https://download.pytorch.org/whl/torch_stable.html
+!pip install segmentation-models-pytorch
+
+import matplotlib.pyplot as plt
+%matplotlib inline
+import SimpleITK as sitk
+import numpy as np
+import os
+from scipy import ndimage
+import cv2
+from google.colab.patches import cv2_imshow
+import torch
+import torch.nn as nn
+import torch.nn.functional as F
+from torch.utils.data import DataLoader, TensorDataset
+import torch.optim as optim
+from torchvision import models
+import segmentation_models_pytorch as smp
+from PIL import Image
+import time
